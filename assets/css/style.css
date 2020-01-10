@@ -1,0 +1,159 @@
+:root {
+    --burgandy:  #7B184C;
+    --blue: #003366;
+    --green: #007377;
+    --yellow: #EBAD2E;
+    --light: #F1F1F3;
+    --gold: #8F7242;
+    --gray: #C9C9C9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background: #fff;
+    color: #000;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.masthead {
+    font-size: 1.5em;
+    background: transparent;
+}
+
+.hero {
+    background: linear-gradient(90deg, rgb(0, 51, 102, .73) 0%,  rgb(123, 24,76, .73)100%), url(../images/brooksherooption.png) center center no-repeat;
+    background-size: fit;
+    color: var(--light);
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 0 0 20em 4em;
+    height: 100vh;
+}
+
+.hero::after {
+    background-image: url(../images/brooksherooption.png);
+
+}
+
+.hero header {
+    flex-grow: 2;
+}
+
+.title {
+    font: Bold 4em Gotham;
+    letter-spacing: -1.9px;
+    color: #F1F1F3;
+}
+
+.sub-title {
+    font-size: 1.5em;
+    font-variant: small-caps;
+}
+
+.decades {
+    padding-right: 1em;
+}
+
+.decades li {
+    list-style: none;
+    margin-bottom: 1.5em;
+}
+
+.decades a {
+    color: var(--gold);
+}
+
+section {
+    margin-bottom: 3em;
+}
+
+#seventies {
+    background-image: url(../images/Decades_70.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#eighties {
+    background-image: url(../images/80-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: var(--light);
+}
+
+#ninties {
+    background-image: url(../images/90-02.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: var(--light);
+}
+
+#aughts {
+    background-image: url(../images/Decades_00.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#teens {
+    background-image: url(../images/Decades_10.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#twenties {
+    background-image: url(../images/Decades_20.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.decade {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.decade h2 {
+    align-self: flex-start;
+    padding: 1em 0 0 2em;
+}
+
+.year {
+    align-self: center;
+    margin: 1em 0;
+    position: relative;
+
+}
+
+.year img {
+    width: 80%;
+}
+
+.month {
+    font-size: 1.5em;
+    font-variant: small-caps;
+    color: var(--gold);
+}
+
+.year h3 {
+    color: var(--blue);
+    font-size: 6em;
+    font-weight: 400;
+    letter-spacing: -6.8px;
+}
+
+.year .dark {
+    color: var(--light);
+}
+
+.content {
+    border-top: 3px solid var(--blue);
+    padding-top: 2em;
+    margin: 0 4em;
+}
