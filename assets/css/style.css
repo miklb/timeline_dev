@@ -51,7 +51,6 @@ body {
     display: flex;
     align-content: center;
     align-items: center;
-    padding: 0 0 20em 4em;
     height: 100vh;
 }
 
@@ -61,11 +60,11 @@ body {
 }
 
 .hero header {
+    padding-left: 2em;
     flex-grow: 2;
 }
 
 .title {
-    padding-top: 7em;
     font: Bold 2.6em 'Gotham Bold';
     letter-spacing: -.9px;
     color: #F1F1F3;
