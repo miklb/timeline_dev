@@ -150,9 +150,6 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-
-
 }
 
 .year img {
@@ -187,4 +184,22 @@ section {
 
 #teens .content {
     border-top: 3px solid var(--blue);
+}
+
+@media( min-width: 460px) {
+
+    #seventies .year,  #eighties .year, #ninties .year, #aughts .year, #teens .year, #twenties .year {
+        background-size: 50%;
+    }
+
+    .year {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .year img {
+        display: block;
+        height: 45vh;
+    } 
 }
