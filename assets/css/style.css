@@ -65,6 +65,7 @@ body {
 }
 
 .title {
+    padding-top: 7em;
     font: Bold 2.6em 'Gotham Bold';
     letter-spacing: -.9px;
     color: #F1F1F3;
