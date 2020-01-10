@@ -193,13 +193,31 @@ section {
     }
 
     .year {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
         align-items: center;
     }
-    
+
     .year img {
+        grid-column: 1;
         display: block;
-        height: 45vh;
+        margin-left: 1em;
     } 
+
+    .content-wrap {
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+    }
+    .year .month {
+        color: var(--gold);
+    }
+    .year h3 {
+        color: #000;
+    }
+
+    .year .content {
+        color: #000;
+    }
 }
