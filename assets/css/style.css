@@ -29,7 +29,7 @@ body {
 
 .hero {
     background: linear-gradient(90deg, rgb(0, 51, 102, .73) 0%,  rgb(123, 24,76, .73)100%), url(../images/brooksherooption.png) center center no-repeat;
-    background-size: fit;
+    background-size: cover;
     color: var(--light);
     display: flex;
     align-content: center;
@@ -75,41 +75,42 @@ section {
     margin-bottom: 3em;
 }
 
-#seventies {
+#seventies  .year{
     background-image: url(../images/Decades_70.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
-#eighties {
+#eighties  .year{
     background-image: url(../images/80-01.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     color: var(--light);
 }
 
-#ninties {
+#ninties .year {
     background-image: url(../images/90-02.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     color: var(--light);
 }
 
-#aughts {
+#aughts .year{
     background-image: url(../images/Decades_00.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
-#teens {
+#teens .year{
     background-image: url(../images/Decades_10.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    color: var(--blue);
 }
 
-#twenties {
+#twenties .year{
     background-image: url(../images/Decades_20.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -126,34 +127,44 @@ section {
 
 .year {
     align-self: center;
-    margin: 1em 0;
-    position: relative;
+    height: 100vh;
+    width: 100vw;
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
 
 }
 
 .year img {
-    width: 80%;
+    display: none;
 }
 
 .month {
     font-size: 1.5em;
     font-variant: small-caps;
-    color: var(--gold);
+    color: var(--light);
+    opacity: .5;
+}
+
+#teens .month {
+    color: var(--blue);
 }
 
 .year h3 {
-    color: var(--blue);
     font-size: 6em;
     font-weight: 400;
     letter-spacing: -6.8px;
 }
 
-.year .dark {
-    color: var(--light);
-}
-
 .content {
-    border-top: 3px solid var(--blue);
+    border-top: 3px solid var(--light);
     padding-top: 2em;
     margin: 0 4em;
+}
+
+#teens .content {
+    border-top: 3px solid var(--blue);
 }
