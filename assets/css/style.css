@@ -160,6 +160,7 @@ section {
 }
 
 .month {
+    font-family: 'Gotham Bold';
     font-size: 1.5em;
     font-variant: small-caps;
     color: var(--light);
@@ -171,6 +172,7 @@ section {
 }
 
 .year h3 {
+    font-family: 'Gotham Light';
     font-size: 6em;
     font-weight: 400;
     letter-spacing: -6.8px;
