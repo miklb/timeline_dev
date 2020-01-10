@@ -193,13 +193,33 @@ section {
     }
 
     .year {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        display: grid; 
+        align-items: start;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(3, 1fr); 
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
     }
-    
+
     .year img {
+        grid-area: 2 / 1 / 3 / 2;
         display: block;
-        height: 45vh;
+        margin-left: 1em;
     } 
+    .year .month {
+        grid-area: 1 / 2 / 2 / 3;
+        color: var(--gold);
+        align-self: end;
+    }
+    .year h3 {
+        color: #000;
+        grid-area: 2 / 2 / 3 / 3;
+        align-self: center;
+    }
+
+    .year .content {
+        color: #000;
+        grid-area: 3 / 2 / 4 / 3;
+        align-self:  start;
+    }
 }
