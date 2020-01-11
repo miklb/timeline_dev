@@ -59,7 +59,7 @@ body {
 .title {
     font: Bold 2.6em 'Gotham Bold';
     letter-spacing: -.9px;
-    color: #F1F1F3;
+    color: var(--light);
 }
 
 .sub-title {
@@ -80,71 +80,81 @@ body {
     color: var(--gold);
 }
 
-section {
-    margin-bottom: 3em;
+.seventies  .event{
+    background-image: url(../images/logo_sq.png), url(../images/Decades_70.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20%, cover;
+    background-position:  top 1.5em left 1.5em, center;
 }
 
-#seventies  .year{
-    background-image: url(../images/Decades_70.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#eighties  .year{
-    background-image: url(../images/80-01.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+.eighties  .event{
+    background-image: url(../images/logo_sq.png), url(../images/80-01.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20%, cover;
+    background-position:  top 1.5em left 1.5em, center;
     color: var(--light);
 }
 
-#ninties .year {
-    background-image: url(../images/90-02.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+.ninties .event {
+    background-image: url(../images/logo_sq.png), url(../images/90-02.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20%, cover;
+    background-position:  top 1.5em left 1.5em, center;
     color: var(--light);
 }
 
-#aughts .year{
-    background-image: url(../images/Decades_00.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+.aughts .event{
+    background-image: url(../images/logo_sq.png), url(../images/Decades_00.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20%, cover;
+    background-position:  top 1.5em left 1.5em, center;
 }
 
-#teens .year{
-    background-image: url(../images/Decades_10.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+.teens .event{
+    background-image: url(../images/logo_sq.png), url(../images/Decades_10.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20%, cover;
+    background-position:  top 1.5em left 1.5em, center;
     color: var(--blue);
 }
 
-#twenties .year{
-    background-image: url(../images/Decades_20.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+.twenties .event{
+    background-image: url(../images/logo_sq.png), url(../images/Decades_20.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20%, cover;
+    background-position:  top 1.5em left 1.5em, center;
 }
 
 .decade {
     display: flex;
+    align-content: space-between;
     flex-direction: column;
     text-align: center;
 }
 
-.decade h2 {
-    align-self: flex-start;
-    padding: 1em 0 0 2em;
-}
-
-.year {
+.event {
     align-self: center;
     height: 100vh;
     width: 100vw;
     color: var(--light);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
 }
 
-.year img {
+.event h2 {
+    padding: 1.5em 1em 0 0;
+    font-size: 2em;
+    font-family: 'Gotham Bold';
+    flex-grow: 1;
+}
+
+.content-wrap {
+    align-self: center;
+    flex-grow: 1;
+}
+
+.event img {
     display: none;
 }
 
@@ -156,11 +166,11 @@ section {
     opacity: .5;
 }
 
-#teens .month {
+.teens .month {
     color: var(--blue);
 }
 
-.year h3 {
+.event h3 {
     font-family: 'Gotham Light';
     font-size: 6em;
     font-weight: 400;
@@ -174,24 +184,28 @@ section {
     line-height: 1.6;
 }
 
-#teens .content {
+.teens .content {
     border-top: 3px solid var(--blue);
 }
 
 @media( min-width: 460px) {
 
-    #seventies .year,  #eighties .year, #ninties .year, #aughts .year, #teens .year, #twenties .year {
+    .hero {
+        background-size: 20%, auto, cover;
+    }
+
+    .seventies .event,  .eighties .event, .ninties .event, .aughts .event, .teens .event, .twenties .event {
         background-size: 50%;
     }
 
-    .year {
+    .event {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
         align-items: center;
     }
 
-    .year img {
+    .event img {
         grid-column: 1;
         display: block;
         margin-left: 1em;
@@ -202,14 +216,14 @@ section {
         display: flex;
         flex-direction: column;
     }
-    .year .month {
+    .event .month {
         color: var(--gold);
     }
-    .year h3 {
+    .event h3 {
         color: #000;
     }
 
-    .year .content {
+    .event .content {
         color: #000;
     }
 }
