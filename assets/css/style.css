@@ -34,29 +34,21 @@
 
 body {
     font-family: 'Gotham Medium';
-    background: #fff;
     color: #000;
     width: 100%;
 }
 
-.masthead {
-    font-size: 1.5em;
-    background: transparent;
-}
 
 .hero {
-    background: linear-gradient(90deg, rgb(0, 51, 102, .73) 0%,  rgb(123, 24,76, .73)100%), url(../images/brooksherooption.png) center center no-repeat;
-    background-size: cover;
+    background-image: url(../images/fiftieth_gold.png), linear-gradient(90deg, rgb(0, 51, 102, .73) 0%,  rgb(123, 24,76, .73)100%), url(../images/brooksherooption.png);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 50%, auto, cover;
+    background-position: top 1.5em left 1.5em, center , 50% 50%;
     color: var(--light);
     display: flex;
     align-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.hero::after {
-    background-image: url(../images/brooksherooption.png);
-
 }
 
 .hero header {
