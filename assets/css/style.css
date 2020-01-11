@@ -41,7 +41,7 @@ body {
 
 .hero {
     background-image: url(../images/fiftieth_gold.png), linear-gradient(90deg, rgb(0, 51, 102, .73) 0%,  rgb(123, 24,76, .73)100%), url(../images/brooksherooption.png);
-    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-repeat: no-repeat;
     background-size: 50%, auto, cover;
     background-position: top 1.5em left 1.5em, center , 50% 50%;
     color: var(--light);
@@ -195,8 +195,11 @@ body {
     }
 
     .seventies .event,  .eighties .event, .ninties .event, .aughts .event, .teens .event, .twenties .event {
-        background-size: 50%;
+        background-size: 10%, 50%;
+        background-position:  top 1.5em left 1.5em, left;
     }
+
+
 
     .event {
         display: grid;
@@ -205,13 +208,22 @@ body {
         align-items: center;
     }
 
+    .event h2 {
+        flex: none;
+        place-self: start;
+        padding: 2em 0 0 6em;
+    }
+
     .event img {
         grid-column: 1;
-        display: block;
-        margin-left: 1em;
+        display: flex;
+        flex-basis: 33%;
+        flex-grow: 2;
+        margin-bottom: 25vh;
     } 
 
     .content-wrap {
+        margin-bottom: 25vh;
         grid-column: 2;
         display: flex;
         flex-direction: column;
