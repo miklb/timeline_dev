@@ -156,6 +156,7 @@ body {
     font-size: 2em;
     font-family: 'Gotham Bold';
     flex-grow: 1;
+    position: sticky;
 }
 
 .content-wrap {
