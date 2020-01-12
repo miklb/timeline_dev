@@ -1,24 +1,27 @@
-$(document).ready(function() { // wait for document ready
-    // init
-    var controller = new ScrollMagic.Controller({
-        globalSceneOptions: {
-            triggerHook: 'onLeave',
-            duration: "200%"
+const sections = [...document.querySelectorAll(".content-wrap, .event img")];
+
+let options = {
+  rootMargin: "0px",
+  threshold: 0.25
+};
+
+const callback = (entries, observer) => {
+  entries.forEach(entry => {
+        const { target } = entry;
+        console.log(entry, target)
+        
+        if (entry.intersectionRatio >= 0.25) {
+            target.classList.add("is-visible");
+        } else {
+            target.classList.remove("is-visible");
         }
-    });
-    
-    // get all slides
-    var decades = document.querySelectorAll(".decade");
+  });
+};
 
-    // create scene for every slide
-    for (var i=0; i<decades.length; i++) {
-        new ScrollMagic.Scene({
-                triggerElement: decades[i],
-            })
-            .setPin(decades[i], {pushFollowers: false})
-            .addIndicators() // add indicators (requires plugin)
-            .addTo(controller);
-    }
+const observer = new IntersectionObserver(callback, options);
 
-
+sections.forEach((section, index) => {
+  observer.observe(section);
 });
+
+window.onload(removeClass());

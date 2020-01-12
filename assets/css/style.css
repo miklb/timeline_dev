@@ -44,6 +44,7 @@ body {
     background-repeat: no-repeat;
     background-size: 50%, auto, cover;
     background-position: top 1.5em left 1.5em, center , 50% 50%;
+    
     color: var(--light);
     display: flex;
     align-content: center;
@@ -80,6 +81,14 @@ body {
     color: var(--gold);
 }
 
+.wrapper {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+.event {
+    scroll-snap-align: center;
+}
 .seventies  .event{
     background-image: url(../images/logo_sq.png), url(../images/Decades_70.png);
     background-repeat: no-repeat, no-repeat;
@@ -95,7 +104,7 @@ body {
     color: var(--light);
 }
 
-.ninties .event {
+.nineties .event {
     background-image: url(../images/logo_sq.png), url(../images/90-02.png);
     background-repeat: no-repeat, no-repeat;
     background-size: 20%, cover;
@@ -152,6 +161,15 @@ body {
 .content-wrap {
     align-self: center;
     flex-grow: 1;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1s ease-in-out;
+    will-change: transform, opacity;
+}
+
+.content-wrap.is-visible {
+    opacity: 1;
+    transform: none;
 }
 
 .event img {
@@ -194,7 +212,7 @@ body {
         background-size: 20%, auto, cover;
     }
 
-    .seventies .event,  .eighties .event, .ninties .event, .aughts .event, .teens .event, .twenties .event {
+    .seventies .event,  .eighties .event, .nineties .event, .aughts .event, .teens .event, .twenties .event {
         background-size: 10%, 50%;
         background-position:  top 1.5em left 1.5em, left;
     }
@@ -215,12 +233,20 @@ body {
     }
 
     .event img {
+        opacity: 0;
+        transform: scale(0.9);
+        transition: all 1s ease-in-out;
+        will-change: transform, opacity;
         grid-column: 1;
         display: flex;
         flex-basis: 33%;
         flex-grow: 2;
         margin-bottom: 25vh;
     } 
+
+    .event img.is-visible {
+        opacity: 1;
+    }
 
     .content-wrap {
         margin-bottom: 25vh;
@@ -238,4 +264,11 @@ body {
     .event .content {
         color: #000;
     }
-}
+
+    .event:nth-child(even) {
+        background-color: #000;
+    }
+
+    .event:nth-child(even) h3,  .event:nth-child(even) .content {
+        color: var(--light);
+    }
