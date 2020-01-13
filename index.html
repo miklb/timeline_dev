@@ -359,7 +359,34 @@
     <footer class="colophon">
         
     </footer>
-    <script   src="https://code.jquery.com/jquery-3.4.1.min.js"   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
-    <script src="assets/js/main.js"></script>
+    <script>
+    const sections = [...document.querySelectorAll(".content-wrap, .event img")];
+
+let options = {
+  rootMargin: "0px",
+  threshold: 0.25
+};
+
+const callback = (entries, observer) => {
+  entries.forEach(entry => {
+        const { target } = entry;
+        console.log(entry, target)
+        
+        if (entry.intersectionRatio >= 0.25) {
+            target.classList.add("is-visible");
+        } else {
+            target.classList.remove("is-visible");
+        }
+  });
+};
+
+const observer = new IntersectionObserver(callback, options);
+
+sections.forEach((section, index) => {
+  observer.observe(section);
+});
+
+window.onload(removeClass());
+    </script>
 </body>
 </html>
