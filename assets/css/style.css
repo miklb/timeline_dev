@@ -1,6 +1,7 @@
 :root {
     --burgandy:  #7B184C;
     --blue: #003366;
+    --navy: #00001E;
     --green: #007377;
     --yellow: #EBAD2E;
     --light: #F1F1F3;
@@ -237,7 +238,7 @@ body {
    background-position: 50% 10%;
    background-size: 50%, 100%;
     min-height: 15em;
-    padding: 7em 0 0 0;
+    padding: 7em 0 0 2em;
     display: flex;
     flex-direction: column;
     color: var(--light);
@@ -326,7 +327,7 @@ body {
     }
 
     .event:nth-child(even) {
-        background-color: #000;
+        background-color: var(--navy);
     }
 
     .event:nth-child(even) h3,  .event:nth-child(even) .content {
