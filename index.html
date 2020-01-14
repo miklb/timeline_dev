@@ -355,7 +355,8 @@
             <p class="content">Brooks Rehabilitation celebrates its 50th anniversary!</p></div>
         </article>
     </section>
-        <footer class="colophon show-on-scroll">
+</div>
+ <footer class="colophon show-on-scroll">
         <hr>
         <p>For five decades, we’ve linked the best minds in rehabilitation with the latest treatments and technology. We look forward to the next 50 years and beyond helping our patients achieve the highest quality of life possible.</p>
         <nav class="bottom">
@@ -365,8 +366,6 @@
             </ul>
         </nav>
     </footer>
-</div>
- 
    
     <script>
     const sections = [...document.querySelectorAll(".content-wrap, .event img")];
@@ -393,7 +392,7 @@ sections.forEach((section, index) => {
   observer.observe(section);
 });
 
-window.onload(removeClass(".is-visible"));
+window.onload(removeClass());
     </script>
 </body>
 </html>

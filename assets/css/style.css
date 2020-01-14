@@ -110,7 +110,7 @@ body {
 .wrapper {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 100vh - 15em;
+    height: 100vh;
 }
 .event {
     scroll-snap-align: center;
