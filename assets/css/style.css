@@ -103,7 +103,7 @@ body {
 .wrapper {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 100vh;
+    height: 100vh - 15em;
 }
 .event {
     scroll-snap-align: center;
@@ -151,13 +151,18 @@ body {
     background-attachment: fixed;
 }
 
+.twenties {
+    min-height: 100vh;
+}
+
 .twenties .event{
     background-image: url(../images/logo_sq.png), url(../images/Decades_20.png);
     background-repeat: no-repeat, no-repeat;
     background-size: 20%, cover;
-    background-position:  top 1.5em left 1.5em, center;
-    background-attachment: fixed;
+    background-position:  top 1.5em left 1.5em, center; 
 }
+
+
 
 .decade {
     display: flex;
@@ -238,13 +243,17 @@ body {
    background-position: 50% 10%;
    background-size: 50%, 100%;
     min-height: 15em;
-    padding: 7em 0 0 2em;
+    padding: 7em 0 3em 0;
     display: flex;
     flex-direction: column;
     color: var(--light);
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+
+.colophon .show-on-scroll {
+    position: sticky;
 }
 
 .colophon a, .colophon a:visited {
