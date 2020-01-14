@@ -75,7 +75,7 @@ body {
 
 .sub-title {
     font-size: 1.5em;
-    font-variant: small-caps;
+    font-variant: uppercase;
 }
 
 .decades {
@@ -204,7 +204,7 @@ body {
 .month {
     font-family: 'Gotham Bold';
     font-size: 1.5em;
-    font-variant: small-caps;
+    font-variant: uppercase;
     color: var(--light);
     opacity: .5;
 }
