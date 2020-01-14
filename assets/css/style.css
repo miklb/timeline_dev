@@ -80,24 +80,31 @@ body {
 }
 
 .decades {
-    padding-right: 2em;
+    margin-right: 2em;
+}
+
+.decades ul {
+    margin: 0 2em;
 }
 
 .decades li {
     list-style: none;
-    margin-bottom: 1.5em;
+    margin: 1em;
+    width: 4em;
 }
 
 .decades a {
     color: var(--gold);
     font-size: 1.2em;
     transition: all .2s ease-in-out;
-    line-height: 2.2em;
+    line-height: 1.2em;
+    padding: 1em 1em;
 }
 
 .decades a:hover {
     color: var(--light);
-    font-size: 1.6em;
+    font-size: 1.4em;
+    line-height: 1.2em;
 }
 
 .wrapper {
