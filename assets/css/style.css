@@ -87,7 +87,7 @@ main {
 }
 
 .title {
-    font: Bold 2.6em 'Gotham Bold';
+    font: Bold 3.2em 'Gotham Bold';
     letter-spacing: -.9px;
     color: var(--light);
 }
@@ -305,6 +305,22 @@ main {
     .hero {
         background-size: 20%, auto, cover;
     }
+
+    .hero header {
+        padding-left: 15%;
+    }
+    
+    .title {
+        font-size: 3.8em;
+        width: 20%;
+    }
+    
+    .sub-title {
+        font-size: 1.5em;
+        font-variant: uppercase;
+    }
+
+
 
     .seventies .event,  .eighties .event, .nineties .event, .aughts .event, .teens .event, .twenties .event {
         background-size: 10%, 50%;
