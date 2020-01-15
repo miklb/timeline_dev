@@ -98,16 +98,17 @@ main {
 }
 
 .decades {
-    margin-right: 2em;
+    
 }
 
 .decades ul {
     margin: 0 2em;
+    text-align: right;
 }
 
 .decades li {
     list-style: none;
-    margin: 1em;
+    margin: 2em 0;
     width: 4em;
 }
 
