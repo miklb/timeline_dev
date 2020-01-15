@@ -295,12 +295,16 @@ main {
 
 .colophon p {
     max-width: 60%;
-    padding: .75rem 0 3em 0;
-    line-height: 1.8;
+    line-height: 1.6;
+}
+
+.colophon p:nth-of-type(2) {
+    padding-bottom: 3em;
 }
 
 .colophon hr {
     margin-top: 3em;
+    margin-bottom: .75em;
     border: 0;
     height: 2px;
     background-color: var(--gold);
