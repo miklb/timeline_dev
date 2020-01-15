@@ -32,6 +32,11 @@
     src: url('../fonts/Gotham-Medium.woff') format('woff');
     font-weight: normal;
 }
+
+@media not (prefers-reduced-motion:reduce) {
+    main { scroll-behavior: smooth; }
+  }
+
 /* Accessibiliy Feature */
 @media screen and
   (prefers-reduced-motion: reduce), 
@@ -43,10 +48,22 @@
   }
 }
 
+html, body {
+    overflow: hidden;
+  }
+
 body {
     font-family: 'Gotham Medium';
     color: #000;
     width: 100%;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    scroll-snap-type: block mandatory;
+
 }
 
 
@@ -55,12 +72,13 @@ body {
     background-repeat: no-repeat;
     background-size: 50%, auto, cover;
     background-position: top 1.5em left 1.5em, center, 50% 50%;
-    
+    top: 0;
     color: var(--light);
     display: flex;
     align-content: center;
     align-items: center;
     height: 100vh;
+    scroll-snap-align: start;
 }
 
 .hero header {
@@ -107,13 +125,9 @@ body {
     line-height: 1.2em;
 }
 
-.wrapper {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-}
 .event {
-    scroll-snap-align: center;
+    scroll-snap-align: start;
+    height: 100vh;
 }
 .seventies  .event{
     background-image: url(../images/logo_sq.png), url(../images/Decades_70.png);
@@ -193,10 +207,11 @@ body {
     font-size: 2em;
     font-family: 'Gotham Bold';
     flex-grow: 1;
-    position: sticky;
+    overflow: hidden;
 }
 
 .content-wrap {
+    padding-top: 50%;
     align-self: center;
     flex-grow: 1;
     opacity: 0;
@@ -257,6 +272,7 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
+    scroll-snap-align: end;
 }
 
 .colophon .show-on-scroll {
@@ -307,6 +323,7 @@ body {
 
     .event h2 {
         flex: none;
+        overflow: hidden;
         place-self: start;
         padding: 2em 0 0 6em;
     }
@@ -320,6 +337,7 @@ body {
         display: flex;
         flex-basis: 33%;
         flex-grow: 2;
+        max-width: 100%;
     } 
 
     .event img.is-visible {
@@ -327,6 +345,7 @@ body {
     }
 
     .content-wrap {
+        padding: 0;
         grid-column: 2;
         display: flex;
         flex-direction: column;
@@ -354,4 +373,10 @@ body {
         background-size: 15%, 100%;
     }
 
+}
+
+@media( min-width: 460px) and (max-width: 1400px) and (orientation: landscape) {
+    .seventies .event,  .eighties .event, .nineties .event, .aughts .event, .teens .event, .twenties .event {
+        background-size: 10%, 50% 100%;
+    }
 }
