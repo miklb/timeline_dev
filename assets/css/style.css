@@ -211,6 +211,7 @@ main {
 }
 
 .content-wrap {
+    padding-top: 50%;
     align-self: center;
     flex-grow: 1;
     opacity: 0;
@@ -344,6 +345,7 @@ main {
     }
 
     .content-wrap {
+        padding: 0;
         grid-column: 2;
         display: flex;
         flex-direction: column;
