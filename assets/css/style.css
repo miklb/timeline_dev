@@ -94,7 +94,7 @@ main {
 
 .sub-title {
     font-size: 1.5em;
-    font-variant: uppercase;
+    text-transform: uppercase;
 }
 
 .decades {
@@ -234,7 +234,7 @@ main {
 .month {
     font-family: 'Gotham Bold';
     font-size: 1.5em;
-    font-variant: uppercase;
+    text-transform: uppercase;
     color: var(--light);
     opacity: .5;
 }
@@ -248,7 +248,6 @@ main {
     overflow: hidden;
     font-size: 6em;
     font-weight: 400;
-    letter-spacing: -6.8px;
     margin-bottom: .5em;
 
 }
@@ -336,7 +335,7 @@ main {
     
     .sub-title {
         font-size: 1.5em;
-        font-variant: uppercase;
+        text-transform: uppercase;
     }
 
 
@@ -389,6 +388,11 @@ main {
     }
     .event h3 {
         color: var(--blue);
+        font-size: ;
+    }
+
+    .content-wrap hr {
+        background-color: var(--blue);
     }
 
     .event .content {
