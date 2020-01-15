@@ -336,6 +336,7 @@ main {
         display: flex;
         flex-basis: 33%;
         flex-grow: 2;
+        max-width: 100%;
     } 
 
     .event img.is-visible {
@@ -370,4 +371,10 @@ main {
         background-size: 15%, 100%;
     }
 
+}
+
+@media( min-width: 460px) and (max-width: 1400px) and (orientation: landscape) {
+    .seventies .event,  .eighties .event, .nineties .event, .aughts .event, .teens .event, .twenties .event {
+        background-size: 10%, 50% 100%;
+    }
 }
