@@ -183,6 +183,7 @@ main {
     background-repeat: no-repeat, no-repeat;
     background-size: 20%, cover;
     background-position:  top 1.5em left 1.5em, center; 
+    background-attachment: fixed;
 }
 
 
@@ -286,7 +287,7 @@ main {
 }
 
 
-.colophon a, .colophon a:visited {
+ a, a:visited {
     color: var(--gold);
 }
 
