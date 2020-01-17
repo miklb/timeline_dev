@@ -421,3 +421,41 @@ main {
         background-size: 10%, 50% 100%;
     }
 }
+
+/* SVG Arrows */
+
+.arrows {
+	
+    padding-right: 30%;
+    padding-top: 50%;
+    display: inline-block;
+}
+
+.arrows path {
+	stroke: var(--light);
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
