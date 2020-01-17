@@ -140,7 +140,7 @@ main {
 }
 
 .eighties  .event{
-    background-image: url(../images/logo_sq.png), url(../images/80-01.png);
+    background-image: url(../images/logo_sq.png), url(../images/Decades_80.png);
     background-repeat: no-repeat, no-repeat;
     background-size: 20%, cover;
     background-position:  top 1.5em left 1.5em, center;
@@ -149,7 +149,7 @@ main {
 }
 
 .nineties .event {
-    background-image: url(../images/logo_sq.png), url(../images/90-02.png);
+    background-image: url(../images/logo_sq.png), url(../images/Decades_90.png);
     background-repeat: no-repeat, no-repeat;
     background-size: 20%, cover;
     background-position:  top 1.5em left 1.5em, center;
