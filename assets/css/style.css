@@ -337,6 +337,11 @@ main {
         text-transform: uppercase;
     }
 
+    .arrows {	
+        padding-right: 30%;
+        padding-top: 50%;
+    }
+
 
 
     .seventies .event,  .eighties .event, .nineties .event, .aughts .event, .teens .event, .twenties .event {
@@ -424,12 +429,7 @@ main {
 
 /* SVG Arrows */
 
-.arrows {
-	
-    padding-right: 30%;
-    padding-top: 50%;
-    display: inline-block;
-}
+
 
 .arrows path {
 	stroke: var(--light);
