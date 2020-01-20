@@ -130,6 +130,10 @@ main {
     line-height: 1.4em;
 }
 
+.arrows {	
+    display: none;
+}
+
 .event {
     scroll-snap-align: start;
     height: 100vh;
@@ -347,6 +351,7 @@ main {
     }
 
     .arrows {	
+        display: block;
         padding-right: 30%;
         padding-top: 50%;
     }
