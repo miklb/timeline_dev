@@ -357,6 +357,7 @@ main {
 
 
     .seventies .event,  .eighties .event, .nineties .event, .aughts .event, .teens .event, .twenties .event {
+        background-color: #fff;
         background-size: 10%, 50%;
         background-position:  top 1.5em left 1.5em, left;
     }
