@@ -84,7 +84,7 @@ main {
     scroll-snap-align: start;
 }
 
-.hero header {
+.hero header {s
     padding-left: 2em;
     flex-grow: 2;
 }
@@ -100,7 +100,9 @@ main {
     text-transform: uppercase;
 }
 
-.decades {}
+.decades {
+    display: none;
+}
 
 .decades ul {
     margin: 0 3em;
@@ -343,6 +345,9 @@ a:visited {
     .arrows {	
         padding-right: 30%;
         padding-top: 50%;
+    }
+    .decades {
+        display: block;
     }
 
 
