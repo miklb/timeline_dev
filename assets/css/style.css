@@ -84,7 +84,7 @@ main {
     scroll-snap-align: start;
 }
 
-.hero header {
+.hero header {s
     padding-left: 2em;
     flex-grow: 2;
 }
@@ -101,7 +101,7 @@ main {
 }
 
 .decades {
-    
+    display: none;
 }
 
 .decades ul {
@@ -349,6 +349,9 @@ main {
     .arrows {	
         padding-right: 30%;
         padding-top: 50%;
+    }
+    .decades {
+        display: block;
     }
 
 
