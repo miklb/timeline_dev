@@ -92,13 +92,13 @@ main {
 
 
 .logo img {
-    padding-left: 2em;
-    width: 250px;
+    padding: 1em 0 0 2em;
+    width: 175px;
     height: auto;
 }
 
 .title {
-    padding: 1.75em 0 0 .25em;
+    padding: 5em 0 0 .25em;
     font: Bold 3.2em 'Gotham Bold';
     color: var(--light);
     line-height: 1;
@@ -332,6 +332,11 @@ section {
 
     .logo {
         padding: 2em 0 0 3em;
+    }
+
+    .logo img {
+        width: 250px;
+        height: auto;
     }
     
     .title {
