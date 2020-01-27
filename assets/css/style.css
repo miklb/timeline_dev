@@ -79,25 +79,34 @@ main {
     top: 0;
     color: var(--light);
     display: flex;
+
     align-content: center;
     align-items: center;
     height: 100vh;
     scroll-snap-align: start;
 }
 
-.hero header {s
+.hero header {
+    align-self: flex-start;
+}
+
+
+.logo img {
     padding-left: 2em;
-    flex-grow: 2;
+    width: 250px;
+    height: auto;
 }
 
 .title {
+    padding: 1.75em 0 0 .25em;
     font: Bold 3.2em 'Gotham Bold';
-    letter-spacing: -.9px;
     color: var(--light);
+    line-height: 1;
 }
 
-.sub-title {
-    font-size: 1.5em;
+.sub-title {  
+    padding-left: 1em;
+    font-size: 1em;
     text-transform: uppercase;
 }
 
@@ -120,16 +129,16 @@ main {
 
 .decades a {
     color: var(--gold);
-    font-size: 1.4em;
+    font-size: 1.6em;
     transition: all .2s ease-in-out;
-    line-height: 1.4em;
+    line-height: 1.6em;
     padding: 1em 1em;
 }
 
 .decades a:hover {
     color: var(--light);
-    font-size: 1.6em;
-    line-height: 1.4em;
+    font-size: 1.8em;
+    line-height: 1.6em;
 }
 
 .arrows {	
@@ -321,17 +330,17 @@ section {
         background-position: center, center, 50% 50%;
     }
 
-    .hero header {
-        padding-left: 13%;
-        
+    .logo {
+        padding: 2em 0 0 3em;
     }
     
     .title {
-        font-size: 4.8em;
-        width: 20%;
+        padding: 1.5em 0 0 .75em;
+        font-size: 7.2em;    
     }
     
     .sub-title {
+        padding-left: 4em;
         font-size: 1.5em;
         text-transform: uppercase;
     }
@@ -401,7 +410,7 @@ section {
     }
     .event h3 {
         color: var(--blue);
-        font-size: 7.5em;
+        font-size: 7.8em;
     }
 
     .content-wrap hr {
