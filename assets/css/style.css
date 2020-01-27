@@ -66,7 +66,6 @@ main {
     overflow-x: hidden;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
-    scroll-padding-bottom: 5em;
 }
 
 
@@ -201,6 +200,12 @@ section {
     background-position:  top 1.5em left 1.5em, center; 
     background-attachment: fixed;
 }
+
+@supports (-webkit-overflow-scrolling: touch) {
+    section .event {
+    background-attachment: scroll;
+    }
+  }
 
 
 
