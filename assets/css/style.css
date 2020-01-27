@@ -29,13 +29,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Gotham Medium';
-    src: url('../fonts/Gotham-Medium.woff') format('woff');
-    font-weight: normal;
-    font-display: swap;
-}
-
 @media not (prefers-reduced-motion:reduce) {
     main { scroll-behavior: smooth; }
   }
