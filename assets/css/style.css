@@ -66,6 +66,7 @@ main {
     overflow-x: hidden;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
+    scroll-padding-bottom: 5em;
 }
 
 
@@ -241,10 +242,6 @@ section {
 .content-wrap.is-visible {
     opacity: 1;
     transform: none;
-}
-
-.event img {
-    display: none;
 }
 
 .month {
