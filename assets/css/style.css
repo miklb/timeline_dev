@@ -66,6 +66,8 @@ main {
     overflow-x: hidden;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 
