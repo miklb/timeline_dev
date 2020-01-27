@@ -19,18 +19,21 @@
     font-family: 'Gotham Light';
     src: url('../fonts/Gotham-Light.woff') format('woff');
     font-weight: lighter;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Gotham Bold';
     src: url('../fonts/Gotham-Bold.woff') format('woff');
     font-weight: bold;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Gotham Medium';
     src: url('../fonts/Gotham-Medium.woff') format('woff');
     font-weight: normal;
+    font-display: swap;
 }
 
 @media not (prefers-reduced-motion:reduce) {
@@ -53,22 +56,23 @@ html, body {
   }
 
 body {
-    font-family: 'Gotham Medium';
+    font-family: 'Gotham Light', Arial, sans-serif;
     color: #000;
     width: 100%;
 }
 
 main {
     height: 100vh;
-    width: 100vw;
-    overflow: auto;
-    scroll-snap-type: block mandatory;
-
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 
 .hero {
-    background-image: url(../images/fiftieth_gold.png), linear-gradient(90deg, rgb(0, 51, 102, .73) 0%,  rgb(123, 24,76, .73)100%), url(../images/brooksherooption.png);
+    background-image: url(../images/fiftieth_gold.png), linear-gradient(90deg, rgb(0, 51, 102, .73) 0%,  rgb(123, 24,76, .73)100%), url(../images/hero.jpg);
     background-repeat: no-repeat;
     background-size: 50%, auto, cover;
     background-position: top 1.5em left 1.5em, center, 50% 50%;
@@ -81,48 +85,57 @@ main {
     scroll-snap-align: start;
 }
 
-.hero header {
+.hero header {s
     padding-left: 2em;
     flex-grow: 2;
 }
 
 .title {
-    font: Bold 2.6em 'Gotham Bold';
+    font: Bold 3.2em 'Gotham Bold';
     letter-spacing: -.9px;
     color: var(--light);
 }
 
 .sub-title {
     font-size: 1.5em;
-    font-variant: uppercase;
+    text-transform: uppercase;
 }
 
 .decades {
-    margin-right: 2em;
+    display: none;
 }
 
 .decades ul {
-    margin: 0 2em;
+    margin: 0 3em;
+    text-align: right;
 }
 
 .decades li {
+    text-align: right;
     list-style: none;
-    margin: 1em;
+    margin: 2em 0;
     width: 4em;
 }
 
 .decades a {
     color: var(--gold);
-    font-size: 1.2em;
+    font-size: 1.4em;
     transition: all .2s ease-in-out;
-    line-height: 1.2em;
+    line-height: 1.4em;
     padding: 1em 1em;
 }
 
 .decades a:hover {
     color: var(--light);
-    font-size: 1.4em;
-    line-height: 1.2em;
+    font-size: 1.6em;
+    line-height: 1.4em;
+}
+
+.arrows {	
+    display: none;
+}
+section {
+    width: 100vw;
 }
 
 .event {
@@ -130,46 +143,28 @@ main {
     height: 100vh;
 }
 .seventies  .event{
+    background-color: var(--gold);
     background-image: url(../images/logo_sq.png), url(../images/Decades_70.png);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 20%, cover;
-    background-position:  top 1.5em left 1.5em, center;
-    background-attachment: fixed;
 }
 
 .eighties  .event{
-    background-image: url(../images/logo_sq.png), url(../images/80-01.png);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 20%, cover;
-    background-position:  top 1.5em left 1.5em, center;
-    color: var(--light);
-    background-attachment: fixed;
+    background-color: var(--blue);
+    background-image: url(../images/logo_sq.png), url(../images/Decades_80.png);
 }
 
 .nineties .event {
-    background-image: url(../images/logo_sq.png), url(../images/90-02.png);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 20%, cover;
-    background-position:  top 1.5em left 1.5em, center;
-    color: var(--light);
-    background-attachment: fixed;
+    background-color: var(--burgandy);
+    background-image: url(../images/logo_sq.png), url(../images/Decades_90.png);
 }
 
 .aughts .event{
+    background-color: var(--green);
     background-image: url(../images/logo_sq.png), url(../images/Decades_00.png);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 20%, cover;
-    background-position:  top 1.5em left 1.5em, center;
-    background-attachment: fixed;
 }
 
 .teens .event{
+    background-color: var(--gray);
     background-image: url(../images/logo_sq.png), url(../images/Decades_10.png);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 20%, cover;
-    background-position:  top 1.5em left 1.5em, center;
-    color: var(--blue);
-    background-attachment: fixed;
 }
 
 .twenties {
@@ -177,11 +172,22 @@ main {
 }
 
 .twenties .event{
+    background-color: var(--gold);
     background-image: url(../images/logo_sq.png), url(../images/Decades_20.png);
+}
+
+.event {
     background-repeat: no-repeat, no-repeat;
     background-size: 20%, cover;
     background-position:  top 1.5em left 1.5em, center; 
+    background-attachment: fixed;
 }
+
+@supports (-webkit-overflow-scrolling: touch) {
+    .event {
+    background-attachment: scroll;
+    }
+  }
 
 
 
@@ -225,14 +231,10 @@ main {
     transform: none;
 }
 
-.event img {
-    display: none;
-}
-
 .month {
     font-family: 'Gotham Bold';
     font-size: 1.5em;
-    font-variant: uppercase;
+    text-transform: uppercase;
     color: var(--light);
     opacity: .5;
 }
@@ -242,30 +244,37 @@ main {
 }
 
 .event h3 {
-    font-family: 'Gotham Light';
+    overflow: hidden;
     font-size: 6em;
     font-weight: 400;
-    letter-spacing: -6.8px;
+    margin-bottom: .5em;
+
+}
+
+.content-wrap hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--light);
+    width: 40%;
+    margin-left: 30%;
 }
 
 .content {
-    border-top: 3px solid var(--light);
+    width: 20em;
     padding-top: 2em;
     margin: 0 4em;
     line-height: 1.6;
 }
 
-.teens .content {
-    border-top: 3px solid var(--blue);
-}
+
 
 .colophon {
     background-image: url(../images/fiftieth_gold.png),linear-gradient(90deg, rgb(0, 51, 102) 0%,  rgb(123, 24,76)100%);
    background-repeat: no-repeat;
-   background-position: 50% 10%;
+   background-position: 50% 17%;
    background-size: 50%, 100%;
     min-height: 15em;
-    padding: 7em 0 3em 0;
+    padding: 10em 0 3em 0;
     display: flex;
     flex-direction: column;
     color: var(--light);
@@ -275,24 +284,27 @@ main {
     scroll-snap-align: end;
 }
 
-.colophon .show-on-scroll {
-    position: sticky;
-}
 
-.colophon a, .colophon a:visited {
+ a, a:visited {
     color: var(--gold);
 }
 
 .colophon p {
     max-width: 60%;
-    padding: 1.5em 0;
+    line-height: 1.6;
+}
+
+.colophon p:nth-of-type(2) {
+    padding-bottom: 3em;
 }
 
 .colophon hr {
+    margin-top: 3em;
+    margin-bottom: .75em;
     border: 0;
     height: 2px;
     background-color: var(--gold);
-    width: 15%;
+    width: 25%;
 }
 
 .bottom li {
@@ -305,9 +317,37 @@ main {
 
     .hero {
         background-size: 20%, auto, cover;
+        background-position: top 2em left 15%, center, 50% 50%;
     }
 
+    .hero header {
+        padding-left: 13%;
+        
+    }
+    
+    .title {
+        font-size: 4.8em;
+        width: 20%;
+    }
+    
+    .sub-title {
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+
+    .arrows {	
+        display: block;
+        padding-right: 30%;
+        padding-top: 50%;
+    }
+    .decades {
+        display: block;
+    }
+
+
+
     .seventies .event,  .eighties .event, .nineties .event, .aughts .event, .teens .event, .twenties .event {
+        background-color: #fff;
         background-size: 10%, 50%;
         background-position:  top 1.5em left 1.5em, left;
     }
@@ -354,7 +394,12 @@ main {
         color: var(--gold);
     }
     .event h3 {
-        color: #000;
+        color: var(--blue);
+        font-size: 7.5em;
+    }
+
+    .content-wrap hr {
+        background-color: var(--blue);
     }
 
     .event .content {
@@ -365,12 +410,16 @@ main {
         background-color: var(--navy);
     }
 
-    .event:nth-child(even) h3,  .event:nth-child(even) .content {
+    .event:nth-child(even) h3,  .event:nth-child(even) .content{
         color: var(--light);
     }
 
+    .event:nth-child(even) hr {
+        background-color: var(--light);
+    }
+
     .colophon {
-        background-size: 15%, 100%;
+        background-size: 22%, 100%;
     }
 
 }
@@ -379,4 +428,37 @@ main {
     .seventies .event,  .eighties .event, .nineties .event, .aughts .event, .teens .event, .twenties .event {
         background-size: 10%, 50% 100%;
     }
+}
+
+/* SVG Arrows */
+
+
+
+.arrows path {
+	stroke: var(--light);
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
 }
