@@ -270,10 +270,10 @@ section {
 
 
 .colophon {
-    background-image: url(../images/fiftieth_gold.png),linear-gradient(90deg, rgb(0, 51, 102) 0%,  rgb(123, 24,76)100%);
+    background-image: url(../images/circles.png), url(../images/fiftieth_gold.png),linear-gradient(90deg, rgb(0, 51, 102) 0%,  rgb(123, 24,76)100%);
    background-repeat: no-repeat;
-   background-position: 50% 17%;
-   background-size: 50%, 100%;
+   background-position: center, 50% 25%, 50% 17%;
+   background-size: cover, 50%, 100%;
     min-height: 15em;
     padding: 10em 0 3em 0;
     display: flex;
@@ -425,7 +425,7 @@ section {
     }
 
     .colophon {
-        background-size: 22%, 100%;
+        background-size: cover, 22%, 100%;
     }
 
 }
