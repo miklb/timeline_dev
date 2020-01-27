@@ -143,49 +143,26 @@ section {
 .seventies  .event{
     background-color: var(--gold);
     background-image: url(../images/logo_sq.png), url(../images/Decades_70.png);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 20%, cover;
-    background-position:  top 1.5em left 1.5em, center;
-    background-attachment: fixed;
 }
 
 .eighties  .event{
     background-color: var(--blue);
     background-image: url(../images/logo_sq.png), url(../images/Decades_80.png);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 20%, cover;
-    background-position:  top 1.5em left 1.5em, center;
-    color: var(--light);
-    background-attachment: fixed;
 }
 
 .nineties .event {
     background-color: var(--burgandy);
     background-image: url(../images/logo_sq.png), url(../images/Decades_90.png);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 20%, cover;
-    background-position:  top 1.5em left 1.5em, center;
-    color: var(--light);
-    background-attachment: fixed;
 }
 
 .aughts .event{
     background-color: var(--green);
     background-image: url(../images/logo_sq.png), url(../images/Decades_00.png);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 20%, cover;
-    background-position:  top 1.5em left 1.5em, center;
-    background-attachment: fixed;
 }
 
 .teens .event{
     background-color: var(--gray);
     background-image: url(../images/logo_sq.png), url(../images/Decades_10.png);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 20%, cover;
-    background-position:  top 1.5em left 1.5em, center;
-    color: var(--blue);
-    background-attachment: fixed;
 }
 
 .twenties {
@@ -195,6 +172,9 @@ section {
 .twenties .event{
     background-color: var(--gold);
     background-image: url(../images/logo_sq.png), url(../images/Decades_20.png);
+}
+
+.event {
     background-repeat: no-repeat, no-repeat;
     background-size: 20%, cover;
     background-position:  top 1.5em left 1.5em, center; 
@@ -202,7 +182,7 @@ section {
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
-    section .event {
+    .event {
     background-attachment: scroll;
     }
   }
