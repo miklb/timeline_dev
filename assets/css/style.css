@@ -315,16 +315,16 @@ section {
 
     .hero {
         background-size: 20%, auto, cover;
-        background-position: top 2em left 12em, center, 50% 50%;
+        background-position: top 2em left 15%, center, 50% 50%;
     }
 
     .hero header {
-        padding-left: 15%;
+        padding-left: 13%;
         
     }
     
     .title {
-        font-size: 4.5em;
+        font-size: 4.8em;
         width: 20%;
     }
     
