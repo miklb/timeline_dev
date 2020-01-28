@@ -384,6 +384,7 @@ section {
     .event img {
         opacity: 0;
         transform: scale(0.9);
+        filter: drop-shadow(8px 8px 5px rgba(0, 0, 0, 0.4));
         transition: all 1s ease-in-out;
         will-change: transform, opacity;
         grid-column: 1;
