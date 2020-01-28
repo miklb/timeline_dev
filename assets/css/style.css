@@ -54,6 +54,28 @@ body {
     width: 100%;
 }
 
+a {
+    color: var(--light);
+    transition: color .5s linear;
+}
+
+a:hover {
+    color: var(--navy);
+}
+
+a:visited {
+    color: var(--gold);
+}
+
+.teens a {
+    color: var(--blue);
+}
+
+.teens a:hover {
+    color: var(--gold);
+}
+
+
 main {
     height: 100vh;
     overflow-x: hidden;
@@ -288,9 +310,7 @@ section {
 }
 
 
- a, a:visited {
-    color: var(--gold);
-}
+
 
 .colophon p {
     max-width: 60%;
@@ -317,6 +337,20 @@ section {
 }
 
 @media( min-width: 460px) {
+
+    a {
+        color: var(--gold);
+        transition: color .5s linear;
+    }
+    
+    a:hover {
+        color: var(--navy);
+    }
+    
+    a:visited {
+        color: var(--gold);
+    }
+
 
     .hero {
         background-size: cover, auto, cover;
