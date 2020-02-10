@@ -1,3 +1,10 @@
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
 :root {
     --burgandy:  #7B184C;
     --blue: #003366;
@@ -56,19 +63,23 @@ body {
 
 a {
     color: var(--light);
+    color: #F1F1F3;
     transition: color .5s linear;
 }
 
 a:hover {
     color: var(--navy);
+    color: #00001E;
 }
 
 a:visited {
     color: var(--gold);
+    color: #8F7242;
 }
 
 .teens a {
     color: var(--blue);
+    color: #003366;
 }
 
 .teens a:hover {
@@ -93,6 +104,7 @@ main {
     background-position: center, center, 50% 50%;
     top: 0;
     color: var(--light);
+    color: #F1F1F3;
     display: flex;
 
     align-content: center;
@@ -116,6 +128,7 @@ main {
     padding: 5em 0 0 .25em;
     font: Bold 3.2em 'Gotham Bold';
     color: var(--light);
+    color: #F1F1F3;
     line-height: 1;
 }
 
@@ -144,6 +157,7 @@ main {
 
 .decades a {
     color: var(--gold);
+    color: #8F7242;
     font-size: 1.6em;
     transition: all .2s ease-in-out;
     line-height: 1.6em;
@@ -152,6 +166,7 @@ main {
 
 .decades a:hover {
     color: var(--light);
+    color: #F1F1F3;
     font-size: 1.8em;
     line-height: 1.6em;
 }
@@ -169,26 +184,31 @@ section {
 }
 .seventies  .event{
     background-color: var(--gold);
+    background-color: #8F7242;
     background-image: url(../images/logo_sq.png), url(../images/Decades_70.png);
 }
 
 .eighties  .event{
     background-color: var(--blue);
+    background-color: #003366;
     background-image: url(../images/logo_sq.png), url(../images/Decades_80.png);
 }
 
 .nineties .event {
     background-color: var(--burgandy);
+    background-color: #7B184C;
     background-image: url(../images/logo_sq.png), url(../images/Decades_90.png);
 }
 
 .aughts .event{
     background-color: var(--green);
+    background-color: #007377;
     background-image: url(../images/logo_sq.png), url(../images/Decades_00.png);
 }
 
 .teens .event{
     background-color: var(--gray);
+    background-color: #C9C9C9;
     background-image: url(../images/logo_sq.png), url(../images/Decades_10.png);
 }
 
@@ -198,6 +218,7 @@ section {
 
 .twenties .event{
     background-color: var(--gold);
+    background-color: #8F7242;
     background-image: url(../images/logo_sq.png), url(../images/Decades_20.png);
 }
 
@@ -228,6 +249,7 @@ section {
     height: 100vh;
     width: 100vw;
     color: var(--light);
+    color: #F1F1F3;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -261,11 +283,13 @@ section {
     font-size: 1.5em;
     text-transform: uppercase;
     color: var(--light);
+    color: #F1F1F3;
     opacity: .5;
 }
 
 .teens .month {
     color: var(--blue);
+    color: #003366;
 }
 
 .event h3 {
@@ -280,6 +304,7 @@ section {
     border: 0;
     height: 1px;
     background-color: var(--light);
+    background-color: #F1F1F3;
     width: 40%;
     margin-left: 30%;
 }
@@ -303,6 +328,7 @@ section {
     display: flex;
     flex-direction: column;
     color: var(--light);
+    color: #F1F1F3;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -327,6 +353,7 @@ section {
     border: 0;
     height: 2px;
     background-color: var(--gold);
+    background-color: #8F7242;
     width: 25%;
 }
 
@@ -340,15 +367,18 @@ section {
 
     a {
         color: var(--gold);
+        color: #8F7242;
         transition: color .5s linear;
     }
     
     a:hover {
         color: var(--navy);
+        color: #00001E;
     }
     
     a:visited {
         color: var(--gold);
+        color: #8F7242;
     }
 
 
@@ -439,14 +469,17 @@ section {
     }
     .event .month {
         color: var(--gold);
+        color: #8F7242;
     }
     .event h3 {
         color: var(--blue);
+        color: #003366;
         font-size: 7.8em;
     }
 
     .content-wrap hr {
         background-color: var(--blue);
+        background-color: #003366;
     }
 
     .event .content {
@@ -455,14 +488,17 @@ section {
 
     .event:nth-child(even) {
         background-color: var(--navy);
+        background-color: #00001E;
     }
 
     .event:nth-child(even) h3,  .event:nth-child(even) .content{
         color: var(--light);
+        color: #F1F1F3;
     }
 
     .event:nth-child(even) hr {
         background-color: var(--light);
+        background-color: #F1F1F3;
     }
 
     .colophon {
@@ -482,7 +518,8 @@ section {
 
 
 .arrows path {
-	stroke: var(--light);
+    stroke: var(--light);
+    stroke :#F1F1F3;
 	fill: transparent;
 	stroke-width: 1px;	
 	animation: arrow 2s infinite;
