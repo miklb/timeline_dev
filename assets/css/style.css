@@ -374,6 +374,11 @@ section {
         color: var(--navy);
         color: #00001E;
     }
+
+    .event:nth-child(even) .content a:hover {
+        color: var(--light);
+        color: #F1F1F3;
+    }
     
     a:visited {
         color: var(--gold);
