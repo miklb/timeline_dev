@@ -560,32 +560,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
     <script>
         "use strict";
-var sections = document.querySelectorAll(".content-wrap, .event img");
 
 var options = {
   rootMargin: "0px",
   threshold: 0.25
 };
 
-var callback = function callback(entries, observer) {
-  entries.forEach(function(entry) {
-    var target = entry.target;
+function callback(entries, options) {
+  for (var i in entries) {
+    entries.forEach(function (entry) {
+      if (entry.intersectionRatio >= 0.25) {
+        entry.target.classList.add('is-visible');
+      } else {
+        entry.target.classList.remove('is-visible');
+      }
+    });
+  }
+}
 
-    if (entry.intersectionRatio >= 0.25) {
-      target.classList.add("is-visible");
-    } else {
-      target.classList.remove("is-visible");
+function initObserver() {
+  var observer = new IntersectionObserver(callback, options);
+  var items = document.querySelectorAll('.content-wrap, .event img');
+
+  for (var i in items) {
+    if (!items.hasOwnProperty(i)) {
+      continue;
     }
-  });
-};
 
-var observer = new IntersectionObserver(callback, options);
+    observer.observe(items[i]);
+  }
+}
 
-sections.forEach(function(section, index) {
-  observer.observe(section);
-});
-
-window.onload(removeClass());
+if (window.IntersectionObserver) {
+  initObserver();
+} else {
+  console.log("IntersectionObserver not supported.");
+}
     </script>
 </body>
 </html>
