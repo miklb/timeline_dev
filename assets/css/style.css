@@ -437,7 +437,7 @@ section {
     .event {
         display: -ms-grid;
         display: grid;
-        ms-grid-columns: minmax(min-content, 1fr) minmax(min-content, 1fr);;
+        ms-grid-columns: minmax(min-content, 1fr) minmax(min-content, 1fr);
         grid-template-columns: 1fr 1fr;
         justify-items: center;
         align-items: center;
