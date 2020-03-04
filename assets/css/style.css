@@ -51,9 +51,7 @@ footer, header, hgroup, menu, nav, section {
   }
 }
 
-html, body {
-    overflow: hidden;
-  }
+
 
 body {
     font-family: 'Gotham Light', Arial, sans-serif;
@@ -98,6 +96,7 @@ main {
 
 
 .hero {
+    background-image: url(../images/hero.jpg);
     background-image: url(../images/hero_circles.png), linear-gradient(90deg, rgb(0, 51, 102, .73) 0%,  rgb(123, 24,76, .73)100%), url(../images/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover, auto, cover;
