@@ -653,7 +653,7 @@ function callback(entries, options) {
 
 function initObserver() {
   var observer = new IntersectionObserver(callback, options);
-  var items = document.querySelectorAll('.content-wrap, .event img');
+  var items = document.querySelectorAll('.content-wrap, .event .left-col');
 
   for (var i in items) {
     if (!items.hasOwnProperty(i)) {
